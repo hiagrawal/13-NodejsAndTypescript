@@ -37,5 +37,7 @@ POST: http://localhost:3000/todo and in Body-raw-json- {"text": "My Second Todo"
 PUT: http://localhost:3000/todo/<id> and in Body-raw-json- {"text": "Updated Todo!"}
 DELETE: http://localhost:3000/todo/<id>
 
-
+Using Type Casting
+Although our code works fine, but since we are using typescript we can enhance our code using type casting and defining types
+for paramters that are supposed to get in our request
 
