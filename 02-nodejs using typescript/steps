@@ -1,2 +1,5 @@
 install ts congif file using 'tsc --init'
 install package.json file using 'npm init'
+
+install express using 'npm install --save express'
+install body-parser package using 'npm install --save body-parser'
