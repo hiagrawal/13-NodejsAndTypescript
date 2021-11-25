@@ -50,3 +50,10 @@ similarly uncomment root directory "rootDir": "./", to "rootDir": "./src" to def
 and then run tsc, which will generate js files for all ts files and put it in dist folder
 
 and now run application using 'node dist/app.js'
+
+or add a 'start' script in package.json file to run code then using 'npm start'
+"start": "node dist/app.js"
+
+Resources:
+you can find a more complex Node TypeScript project/ project setup here:
+ https://github.com/Microsoft/TypeScript-Node-Starter#typescript-node-starter
