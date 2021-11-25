@@ -5,6 +5,9 @@ const num2Element = document.getElementById('num2') as HTMLInputElement;
 const buttonElement = document.querySelector('button')!; 
 //button button is always an htmlButtonElement hence we dont need to give it explicitely and it took buttonType on its own
 
+const numResults: number[] = [];
+const stringResults: string[] = [];
+
 function add(num1: number | string, num2: number | string){
     if(typeof num1 === 'number' && typeof num2 === 'number'){
         return num1 + num2;
@@ -19,6 +22,10 @@ function add(num1: number | string, num2: number | string){
 //console.log(add(1,2));
 // console.log(add('1','2'));
 
+function printResult(resultObj: {val: number, timestamp: Date}){
+    console.log(resultObj.val);
+}
+
 buttonElement.addEventListener('click', ()=>{
     const num1 = num1Element.value;
     const num2 = num2Element.value;
@@ -28,9 +35,16 @@ buttonElement.addEventListener('click', ()=>{
     //which always returns a string and hence by using typescript saved us from runtime error
     //and to fix, we added '+' sign which converted string to number
     console.log(result);
+    numResults.push(result as number);
+    console.log(numResults);
 
     const stringResult = add(num1, num2); 
     console.log(stringResult);
+    stringResults.push(stringResult as string);
+    console.log(stringResults);
+
+    console.log(printResult({val: result as number, timestamp: new Date()}));
+
 
 })
 

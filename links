@@ -63,6 +63,13 @@ like num1: number | string
 
 --------------------------------------------------------------------------------------------------------------------
 
+Object and Array Types:
+
+we can define object type as the structure of the object and then each value in object type
+in array, we can define array type as type of values it has with array symbol (number[]) which indicates it is an array of type numbers
+
+-----------------------------------------------------------------------------------------------------------------------------
+
 
 
 
