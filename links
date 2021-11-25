@@ -1,3 +1,5 @@
+Basic Setup
+
 To use typescript, we need to install a compiler that converts typescript to javascript as browser understands only javascript
 
 for that we need to install
@@ -15,10 +17,19 @@ tsc -v /tsc.cmd -v
 defer makes sure that it executes only when the html body has been parsed
 <script src="app.js" defer></script>
 
+------------------------------------------------------------------------------------------------------------------
+Assigning Types
+
 Now, when we didnt use 'type', we were able to pass numbers as strings also but now when we defined the type number 
 and run tsc app.ts to convert it to js, it gave us an error that argumnet of type string is not assignable to type number
 and that's the basic usage of typescript that it allows us to avoid errors at compile time or during development only that
 we might get during runtime with javascript
+
+------------------------------------------------------------------------------------------------------------------------
+
+Type Interface and Type Casting
+
+It's important to note that Typescript is built on top of Javascript so anything that we write in js can always use in ts
 
 
 
