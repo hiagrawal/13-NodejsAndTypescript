@@ -5,7 +5,7 @@ To use typescript, we need to install a compiler that converts typescript to jav
 for that we need to install
 -npm install -g typescript
 
-Once typescript is installed, we can run 
+Once typescript is installed, we can run (tsc stands for typescript compiler)
 tsc <filename- ts file> (on git bash) or tsc.cmd <filename- ts file> (on powershell)
 so it converts ts file into js file into a new generated file
 
@@ -30,6 +30,32 @@ we might get during runtime with javascript
 Type Interface and Type Casting
 
 It's important to note that Typescript is built on top of Javascript so anything that we write in js can always use in ts
+HTMLInputElement
+
+-------------------------------------------------------------------------------------------------------------------
+
+Configuring Typescript
+
+we can add a configuration file using 'tsc --init'. This will add a tsconfig.json file
+This file has various configuration paramters defined and we can comment/uncomment any config paramters
+
+Now one such paramter is 'strict:true' which is on by default which indicates that all ts file in folder needs to run in strict mode
+
+so, as it run app.ts file in strict mode, 'buttonElement' can be null and we should check the null type
+for this, either we can check if(buttonElement) and then can write our code or give '!' when fetching the buttonElement
+which indicates that theoretically it can be null but we are sure that this element exists in html file and not null
+so typescript can ignore the null check
+
+another with strict mode is.. we cant omit the type of paramter defined like number. we can give 'any' if we are not sure of the type
+but we need to define the type and cant leave without it
+
+Now once tsconfig file is added, we can just run 'tsc' without the filename and it will compile all ts file to js file using the 
+tsconfig.json config paramters into consideration
+however, we can still give 'tsc <filename>' and it will compile spefic that file only and will not consider tsconfig.json config paramters
+but IDE would still be giving the error
+
+---------------------------------------------------------------------------------------------------------------------
+
 
 
 

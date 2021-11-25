@@ -2,7 +2,7 @@ const num1Element = document.getElementById("num1") as HTMLInputElement;
 //here we need to give as HTMLInput Element since it can be any html element by default and if we dont define 
 //then when we access it's value using .value, it gives an error since it does not know it is an input type element
 const num2Element = document.getElementById('num2') as HTMLInputElement;
-const buttonElement = document.querySelector('button'); 
+const buttonElement = document.querySelector('button')!; 
 //button button is always an htmlButtonElement hence we dont need to give it explicitely and it took buttonType on its own
 
 function add(num1: number, num2: number){
