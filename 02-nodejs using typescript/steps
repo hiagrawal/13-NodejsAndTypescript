@@ -1,0 +1,2 @@
+install ts congif file using 'tsc --init'
+install package.json file using 'npm init'
