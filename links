@@ -1,0 +1,18 @@
+To use typescript, we need to install a compiler that converts typescript to javascript as browser understands only javascript
+
+for that we need to install
+-npm install -g typescript
+
+Once typescript is installed, we can run 
+tsc <filename- ts file> (on git bash) or tsc.cmd <filename- ts file> (on powershell)
+so it converts ts file into js file into a new generated file
+
+so we created app.ts file and run tsc app.ts and it generated app.js file that we included in index.html page
+
+to check if typescript is installed, 
+tsc -v /tsc.cmd -v
+
+defer makes sure that it executes only when the html body has been parsed
+<script src="app.js" defer></script>
+
+
