@@ -5,8 +5,15 @@ const num2Element = document.getElementById('num2') as HTMLInputElement;
 const buttonElement = document.querySelector('button')!; 
 //button button is always an htmlButtonElement hence we dont need to give it explicitely and it took buttonType on its own
 
-function add(num1: number, num2: number){
-    return num1 + num2;
+function add(num1: number | string, num2: number | string){
+    if(typeof num1 === 'number' && typeof num2 === 'number'){
+        return num1 + num2;
+    }
+    if(typeof num1 === 'string' && typeof num2 === 'string'){
+        return num1 + num2;
+    }
+    return +num1 + +num2;
+    
 }
 
 //console.log(add(1,2));
@@ -21,6 +28,9 @@ buttonElement.addEventListener('click', ()=>{
     //which always returns a string and hence by using typescript saved us from runtime error
     //and to fix, we added '+' sign which converted string to number
     console.log(result);
+
+    const stringResult = add(num1, num2); 
+    console.log(stringResult);
 
 })
 

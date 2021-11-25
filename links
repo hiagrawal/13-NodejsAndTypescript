@@ -55,6 +55,14 @@ however, we can still give 'tsc <filename>' and it will compile spefic that file
 but IDE would still be giving the error
 
 ---------------------------------------------------------------------------------------------------------------------
+Union Types
+
+Union types are basically if we want to define multiple type of value to be allowed
+
+like num1: number | string
+
+--------------------------------------------------------------------------------------------------------------------
+
 
 
 
