@@ -70,6 +70,39 @@ in array, we can define array type as type of values it has with array symbol (n
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+Type Aliases and Intefaces
+
+we can give our type aliases using 'type' keyword which is a typescript provided keyword and does not exist in javascript
+using this, we can define our types and use it across
+
+type NumOrString = number | string;
+
+Interfaces
+
+when it comes to object, we can define Interfaces also to define its type. We can use type aliases also and interfaces are more
+common for defining object types
+
+interface ResultObjInterface {
+    val: number; 
+    timestamp: Date;
+}
+
+we do not see this when we convert it to javascript bcz type aliases and interfaces does not exist in javascript
+----------------------------------------------------------------------------------------------------------------------
+
+Generic Type
+
+Generic type are used for the types that re connected to each other
+like we have array of numbers
+so its type is array and it holds values as number so number is its generic type
+
+similarly we has promises
+promises is a type and it can hold value of lets say string so string is its generic type
+
+we define generic types in '<>'
+eg: const numResults: Array<number> = [];
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 

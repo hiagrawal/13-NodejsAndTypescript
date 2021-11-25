@@ -5,10 +5,19 @@ const num2Element = document.getElementById('num2') as HTMLInputElement;
 const buttonElement = document.querySelector('button')!; 
 //button button is always an htmlButtonElement hence we dont need to give it explicitely and it took buttonType on its own
 
-const numResults: number[] = [];
+//const numResults: number[] = [];
+const numResults: Array<number> = [];
 const stringResults: string[] = [];
 
-function add(num1: number | string, num2: number | string){
+type NumOrString = number | string;
+type ResultObj = {val: number; timestamp: Date};
+
+interface ResultObjInterface {
+    val: number; 
+    timestamp: Date;
+}
+
+function add(num1: NumOrString, num2: NumOrString){
     if(typeof num1 === 'number' && typeof num2 === 'number'){
         return num1 + num2;
     }
@@ -22,7 +31,7 @@ function add(num1: number | string, num2: number | string){
 //console.log(add(1,2));
 // console.log(add('1','2'));
 
-function printResult(resultObj: {val: number, timestamp: Date}){
+function printResult(resultObj: ResultObjInterface){
     console.log(resultObj.val);
 }
 
@@ -44,7 +53,17 @@ buttonElement.addEventListener('click', ()=>{
     console.log(stringResults);
 
     console.log(printResult({val: result as number, timestamp: new Date()}));
+})
 
+//it is a promise type and holds value as string so string is its generic type
+var promise = new Promise<string>((resolve, reject) =>{
+    setTimeout(()=>{
+        resolve('It worked');
+    }, 1000)
+});
 
+//so now it knows that result will always be a string and hence can use split function
+promise.then(result => {
+    console.log(result.split(' '));
 })
 

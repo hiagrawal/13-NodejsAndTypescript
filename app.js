@@ -5,6 +5,7 @@ const num1Element = document.getElementById("num1");
 const num2Element = document.getElementById('num2');
 const buttonElement = document.querySelector('button');
 //button button is always an htmlButtonElement hence we dont need to give it explicitely and it took buttonType on its own
+//const numResults: number[] = [];
 const numResults = [];
 const stringResults = [];
 function add(num1, num2) {
@@ -37,4 +38,14 @@ buttonElement.addEventListener('click', () => {
     stringResults.push(stringResult);
     console.log(stringResults);
     console.log(printResult({ val: result, timestamp: new Date() }));
+});
+//it is a promise type and holds value as string so string is its generic type
+var promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('It worked');
+    }, 1000);
+});
+//so now it knows that result will always be a string and hence can use split function
+promise.then(result => {
+    console.log(result.split(' '));
 });
