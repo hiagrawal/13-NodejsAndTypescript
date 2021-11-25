@@ -19,3 +19,6 @@ with typescript, we can bydefault use import syntax and we should use import syn
 and method names available and its overloads paramters 
 
 we should also uncomment "moduleResolution": "node" in tsconfig file so that it understands that it is a node application
+
+to use all types provided by body-parser, install its type definitions
+so 'npm install --save-dev @types/body-parser'
