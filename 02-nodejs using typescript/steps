@@ -41,3 +41,12 @@ Using Type Casting
 Although our code works fine, but since we are using typescript we can enhance our code using type casting and defining types
 for paramters that are supposed to get in our request
 
+since we need to convert out ts code in js code, it is creating a new file for ts file at the same place 
+and making our project structure look clumsy and hence we can fix that
+
+we can uncomment  "outDir": "./" in tsconfig file and give path to it as  "outDir": "./dist",
+similarly uncomment root directory "rootDir": "./", to "rootDir": "./src" to define where our app file resides
+
+and then run tsc, which will generate js files for all ts files and put it in dist folder
+
+and now run application using 'node dist/app.js'
