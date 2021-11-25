@@ -22,3 +22,20 @@ we should also uncomment "moduleResolution": "node" in tsconfig file so that it 
 
 to use all types provided by body-parser, install its type definitions
 so 'npm install --save-dev @types/body-parser'
+
+To test it, we first will have to compile it and convert all typescript to javascript
+so run 'tsc' to compile all ts files
+
+and run 'node app.js' to run app js file and start the server
+make a note that node only understands js file and not ts file 
+and hence we need to run 'node app.js' file and not 'node app.ts' file
+
+and once server is up, we can test all our rest apis uisng Postman
+
+GET: http://localhost:3000
+POST: http://localhost:3000/todo and in Body-raw-json- {"text": "My Second Todo"}
+PUT: http://localhost:3000/todo/<id> and in Body-raw-json- {"text": "Updated Todo!"}
+DELETE: http://localhost:3000/todo/<id>
+
+
+
