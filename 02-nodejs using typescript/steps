@@ -3,3 +3,19 @@ install package.json file using 'npm init'
 
 install express using 'npm install --save express'
 install body-parser package using 'npm install --save body-parser'
+
+Now when we convert app.js to app.ts, we get error in require but typescript does not understand require and for that we can
+install 'npm install --save-dev @types/node'
+
+@type allows typescript translations for javascript code 
+using this, we can use nodejs specifoic code in typescript file
+
+to make typescript understand and recognize all express methods
+install 'npm install --save-dev @types/express'
+This will install type definitions for the express library
+
+now to use es6 import feature, we added '"type":"module"' with javascript but with typescript, we get this as it install
+with typescript, we can bydefault use import syntax and we should use import syntax cz as we use that we get suggestions 
+and method names available and its overloads paramters 
+
+we should also uncomment "moduleResolution": "node" in tsconfig file so that it understands that it is a node application
